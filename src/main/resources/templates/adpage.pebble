@@ -33,9 +33,9 @@
         <div class="img-with-text" id="content">
                     <a href="#" onclick="$.get('/web/adclicked/{{product.id}}')">
                         {% if product.has_local_asset %}-->
-                        <img src="{{ url_for('assets', path=product.src) }}" alt="unknown">
+                        <img src="/{{ href(product.src) }}" alt="unknown">
                         {% else %}
-                        <img src="{{product.src}}" alt="unknown">
+                        <img src="/{{product.src}}" alt="unknown">
                         {% endif %}
                         <p align="center" style="font-size:20px"> {{product.name}} </p>
                     </a>

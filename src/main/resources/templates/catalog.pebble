@@ -18,7 +18,7 @@
             <td>
                 <div class="img-with-text">
                     <a href="#" onclick="$.get('/web/productclicked/{{product.id}}')">
-                       <img src="{{ url_for('assets', path=product.src) }}" alt="unknown">
+                       <img src="/{{ href(product.src) }}" alt="unknown">
                         <p align="center" style="font-size:20px"> {{product.name}} </p>
                     </a>
                 </div>
