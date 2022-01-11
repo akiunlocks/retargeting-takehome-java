@@ -1,0 +1,34 @@
+{"products":
+  [
+    {
+      "id": "prbskl",
+      "name":"basketball",
+      "src": "basketball.jpeg",
+      "category": "sports"
+    },
+    {
+      "id": "prbk",
+      "name": "bike",
+      "category": "sports",
+      "src": "bike.jpeg"
+    },
+    {
+      "id": "prgrl",
+      "name": "grill",
+      "src": "weber-grill.jpeg",
+      "category": "grilling"
+    },
+    {
+      "id": "prutsl",
+      "name": "grill utensils",
+      "src": "grill-utensils.jpeg",
+      "category": "grilling"
+    },
+    {
+      "id": "akiad",
+      "name": "akilogo",
+      "src": "default-aki-ad.jpeg",
+      "category": "default"
+    }
+  ]
+}

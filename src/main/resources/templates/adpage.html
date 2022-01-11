@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote of the day with an ad</title>
+    <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
+    <style>
+        html, body {height:100%;}
+        body {font-size: 150%; }
+        .title-box {
+            border: #3c5a86 1px dotted;
+            width: 20%;
+        }
+        .title-box #title {
+            position: relative;
+            top: -0.5em;
+            margin-left: 1em;
+            display: inline;
+            background-color: white;
+            font-family: Arial
+            font-style: italic;
+        }
+        .title-box #content {
+            font-size: 50%;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <div class="title-box">
+        <div id="title"> Aki Ad</div>
+        <div class="img-with-text" id="content">
+                    <a href="#" onclick="$.get('/web/adclicked/{{product.id}}')">
+                        {% if product.has_local_asset %}-->
+                        <img src="{{ url_for('assets', path=product.src) }}" alt="unknown">
+                        {% else %}
+                        <img src="{{product.src}}" alt="unknown">
+                        {% endif %}
+                        <p align="center" style="font-size:20px"> {{product.name}} </p>
+                    </a>
+        </div>
+    </div>
+</body>
+</html>
