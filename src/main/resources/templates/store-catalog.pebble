@@ -15,7 +15,7 @@
         <tr>
             <td>
                 <div class="img-with-text">
-                    <a href="/storecatalog/grilling" target="_blank">
+                    <a href="/web/storecatalog/grilling" target="_blank">
                         <img title="grill" alt="unknown" src="/{{ href(grillpath) }}"/>
                         <p align="center" style="font-size:20px"> Grilling Items </p>
                     </a>
@@ -23,17 +23,18 @@
             </td>
             <td>
                 <div class="img-with-text">
-                    <a href="/storecatalog/sports">
+                    <a href="/web/storecatalog/sports">
                         <img src="/{{ href(sportspath) }}" alt="unknown" onclick=""/>
                         <p align="center" style="font-size:20px"> Sports Items </p>
                     </a>
                 </div>
             </td>
         </tr>
-
+        <tr>
+            <td align="center" colspan="2"> <a href="/web/quoteoftheday"> Quote Of The Day </a> </td>
+        </tr>
     </tbody>
 </table>
 
-<a href="/web/quoteoftheday"> Quote Of The Day </a>
 </body>
 </html>

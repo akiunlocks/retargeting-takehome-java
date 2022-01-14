@@ -6,7 +6,7 @@
 </head>
 <body>
     <center>
-        <img src="{{url_for('assets', src='error-message.png') }}">
+        <img src="{{ href('error-message.png') }}">
         {{errormsg}}
     </center>
 </body>

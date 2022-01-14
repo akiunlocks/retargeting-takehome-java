@@ -13,11 +13,11 @@ import java.util.Map;
 import java.util.Optional;
 
 public class Cache {
-    Map<String, User> users = new HashMap<>();
-    Map<String, List<Product>> productsByCategory = new LinkedHashMap<>();
-    Map<String, Product> productsById = new HashMap<>();
-    Map<String, List<Product>> promotions_by_category = new HashMap<>();
-    Map<String, Product> promotions_by_product_id = new LinkedHashMap<> ();
+    public Map<String, User> users = new HashMap<>();
+    public Map<String, List<Product>> productsByCategory = new LinkedHashMap<>();
+    public Map<String, Product> productsById = new HashMap<>();
+    public Map<String, List<Product>> promotions_by_category = new HashMap<>();
+    public Map<String, Product> promotions_by_product_id = new LinkedHashMap<> ();
 
     public Optional<Product> lookupProduct(String pid) {
         return Optional.ofNullable(productsById.get(pid));
@@ -25,6 +25,10 @@ public class Cache {
 
     public List<Product> getProducts(String category) {
         return productsByCategory.getOrDefault(category, Collections.emptyList());
+    }
+
+    public User getOrAddUser(String userId) {
+        return users.computeIfAbsent(userId, x -> new User());
     }
 
     public void addProduct(Product product) {

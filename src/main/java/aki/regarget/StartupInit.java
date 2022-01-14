@@ -18,7 +18,8 @@ public class StartupInit implements ApplicationListener<ApplicationReadyEvent> {
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         try {
             core.loadStoreCatalog();
-        } catch (IOException e) {
+            core.loadPromotions();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

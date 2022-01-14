@@ -10,4 +10,5 @@ public class Product {
     private String name;
     private String src;
     private String category;
+    private String url;
 }
